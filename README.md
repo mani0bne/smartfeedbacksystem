@@ -15,7 +15,6 @@ This project is developed as part of the **TCS iON Placement Success Program –
 - Provide admins with a centralized **analytics dashboard**
 - Store feedback in a **JSON-style MongoDB database**
 - Perform feedback analysis using **charts (Pie & Bar)**
-- Ensure secure authentication and role-based access
 
 ---
 
@@ -24,13 +23,11 @@ This project is developed as part of the **TCS iON Placement Success Program –
 ### 👤 User Features
 - User registration and login
 - Submit feedback with ratings and comments
-- View personal feedback history
 
 ### 🕵️ Guest Features
 - Submit feedback anonymously without registration
 
 ### 🛠 Admin Features
-- Admin login (one-time manual creation)
 - View all feedback submissions
 - Analyze feedback using visual charts
 - Manage users and feedback data
@@ -98,7 +95,6 @@ MongoDB (NoSQL Database)
 
 - Password hashing using **Flask-Bcrypt**
 - JWT-based session handling
-- Role-based access (User / Admin)
 - Secure API endpoints
 
 ---
@@ -110,9 +106,7 @@ Smart-Feedback-System/
 │
 ├── frontend/
 │   ├── src/
-│   │   ├── auth/
-│   │   ├── admin/
-│   │   ├── feedback/
+│   │   ├── dashboard/
 │   │   └── App.jsx
 │
 ├── backend/
@@ -172,13 +166,6 @@ npm run dev
 - Email notifications
 - Multi-language support
 - Cloud deployment (AWS/GCP)
-
----
-
-## 🔗 Project Links
-
-- **Source Code:** *(Add GitHub URL here)*
-- **Demo Video:** *(Optional)*
 
 ---
 
