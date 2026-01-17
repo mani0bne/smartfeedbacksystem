@@ -1,4 +1,7 @@
 flask
 flask-cors
+jwt
 textblob
 pymongo
+datetime
+flask_bcrypt

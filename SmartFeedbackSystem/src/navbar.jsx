@@ -1,46 +1,74 @@
 import { NavLink } from "react-router-dom";
-import { Film, BarChart3 } from "lucide-react";
+import { Film, ShieldCheck, LogIn, UserPlus } from "lucide-react";
 
 export default function Navbar() {
   return (
     <nav className="bg-black border-b border-cyan-500/30 px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
 
-        {/* Logo / Title */}
+        {/* App Title */}
+      
         <div className="flex items-center gap-2">
           <Film className="text-cyan-400 w-6 h-6" />
-          <h1 className="text-xl font-bold text-cyan-400 tracking-wider">
-            Movie Feedback
+          <NavLink to="/">
+          <h1 className="text-xl font-bold text-cyan-400 tracking-wide">
+            Movie Feedback System
           </h1>
+          </NavLink>
         </div>
 
-        {/* Navigation Links */}
-        <div className="flex items-center gap-6">
+        {/* Navigation */}
+        <div className="flex items-center gap-6 text-sm font-semibold">
+
+          {/* Feedback Page
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `flex items-center gap-1 text-sm font-semibold ${
-                isActive
-                  ? "text-purple-400"
-                  : "text-cyan-300 hover:text-purple-400"
-              }`
+              isActive
+                ? "text-purple-400"
+                : "text-cyan-300 hover:text-purple-400"
             }
           >
-            🎬 Feedback
+            🎬 Give Feedback
+          </NavLink> */}
+
+          {/* User Signup
+          <NavLink
+            to="/signup"
+            className={({ isActive }) =>
+              isActive
+                ? "text-purple-400 flex items-center gap-1"
+                : "text-cyan-300 hover:text-purple-400 flex items-center gap-1"
+            }
+          >
+            <UserPlus size={16} /> Signup
+          </NavLink> */}
+
+          {/* User Login */}
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              isActive
+                ? "text-purple-400 flex items-center gap-1"
+                : "text-cyan-300 hover:text-purple-400 flex items-center gap-1"
+            }
+          >
+            <LogIn size={16} /> Login
           </NavLink>
 
+          {/* Admin Login */}
           <NavLink
-            to="/dashboard"
+            to="/admin/login"
             className={({ isActive }) =>
-              `flex items-center gap-1 text-sm font-semibold ${
-                isActive
-                  ? "text-purple-400"
-                  : "text-cyan-300 hover:text-purple-400"
-              }`
+              isActive
+                ? "text-purple-400 flex items-center gap-1"
+                : "text-cyan-300 hover:text-purple-400 flex items-center gap-1"
             }
           >
-            <BarChart3 size={16} /> Analytics
+            <ShieldCheck size={16} /> Admin
           </NavLink>
+
+
         </div>
       </div>
     </nav>
